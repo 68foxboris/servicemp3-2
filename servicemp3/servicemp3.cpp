@@ -533,6 +533,16 @@ eServiceMP3::eServiceMP3(eServiceReference ref):
 		m_sourceinfo.containertype = ctWEBM;
 		m_sourceinfo.is_video = TRUE;
 	}
+	else if ( strcasecmp(ext, ".ape") == 0 )
+	{
+		m_sourceinfo.audiotype = atAPE;
+		m_sourceinfo.is_audio = TRUE;
+	}
+		else if ( strcasecmp(ext, ".av1") == 0 )
+	{
+		m_sourceinfo.containertype = ctMKV;
+		m_sourceinfo.is_video = TRUE;
+	}
 	else if (strcasecmp(ext, ".m4a") == 0 || strcasecmp(ext, ".alac") == 0)
 	{
 		m_sourceinfo.containertype = ctMP4;
